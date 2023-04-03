@@ -1,0 +1,56 @@
+<html lang="nl"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="nl" />
+    <title>Diyanet Lommel</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.simpleTicker.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="carousel">
+  <div class="carousel-item">
+    <div class="red"></div>
+  </div>
+  <div class="carousel-item">
+    <div class="green"></div>
+  </div>
+  <div class="carousel-item">
+    <div class="yellow"></div>
+  </div>
+  <div class="carousel-item">
+    <div class="violet"></div>
+  </div>
+</div>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="jquery.simpleTicker.js"></script>
+<script>
+   window.onload = function(){
+  var slides = document.getElementsByClassName('carousel-item'),
+      addActive = function(slide) {slide.classList.add('active')},
+      removeActive = function(slide) {slide.classList.remove('active')};
+  addActive(slides[0]);
+  
+  setInterval(function (){
+    for (var i = 0; i < slides.length; i++){
+      if (i + 1 == slides.length) {
+        addActive(slides[0]);
+        slides[0].style.zIndex = 100;
+        setTimeout(removeActive, 350, slides[i]); //Doesn't be worked in IE-9
+        break;
+      }
+      if (slides[i].classList.contains('active')) { 
+        slides[i].removeAttribute('style');
+        setTimeout(removeActive, 350, slides[i]); //Doesn't be worked in IE-9
+        addActive(slides[i + 1]);
+        break;
+      }
+    } 
+  }, 4000);
+}
+  
+</script>
+</body>
+</html>
