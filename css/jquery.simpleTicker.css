@@ -1,0 +1,25 @@
+.ticker {
+  margin: 0 auto;
+  padding: 10px;
+  width: 98%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background-color:#ffffff;
+  box-sizing: content-box;
+  height: 60px;
+}
+
+.ticker ul {
+  padding:0;
+  margin:0;
+  list-style-type: none;
+}
+
+.ticker ul li {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 36px;
+  display: none;
+}
+

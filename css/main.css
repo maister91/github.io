@@ -1,0 +1,16 @@
+.carousel-item {
+  /* height: 480px; */
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .transition(.15s ease-in-out left);
+}
+div.ticker{
+  margin:10px auto;
+}
+div.ticker ul{
+  margin:auto;
+}
