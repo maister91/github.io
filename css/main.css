@@ -96,7 +96,7 @@ body {
 
 /* Background images */
 .slide:first-child {
-  background: url('../resimler/image1.jpg') no-repeat center center/cover;
+  background: url('../resimler/image1.png') no-repeat center center/cover;
 }
 
 .slide:nth-child(2) {

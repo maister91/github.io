@@ -37,6 +37,7 @@ const prevSlide = () => {
   setTimeout(() => current.classList.remove('current'));
 };
 
+
 // Auto slide
 if(auto) {
   // Run next slide at interval time
