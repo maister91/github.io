@@ -1,1 +1,56 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>SlideShow</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+  <div class="carousel">
+    <div class="carousel-slides">
+      <img src="resimler/image1.jpg" alt="">
+      <img src="resimler/image2.jpg" alt="">
+      <img src="resimler/image3.jpg" alt="">
+    </div>
+  </div>
+
+  <script>
+    // Set slide interval time in milliseconds
+    var slideInterval = 5000;
+
+    // Get carousel slides container
+    var carouselSlides = document.querySelector('.carousel-slides');
+
+    // Get carousel slides
+    var slides = carouselSlides.getElementsByTagName('img');
+
+    // Set initial active slide index
+    var activeSlideIndex = 0;
+
+    // Set slide interval
+    setInterval(function () {
+      // Set next slide index
+      var nextSlideIndex = activeSlideIndex + 1;
+
+      // If next slide index is greater than the number of slides, set it to 0
+      if (nextSlideIndex >= slides.length) {
+        nextSlideIndex = 0;
+      }
+
+      // Set transform property of carousel slides container
+      carouselSlides.style.transform = 'translateX(-' + (nextSlideIndex * 100) + '%)';
+
+      // Set active slide index
+      activeSlideIndex = nextSlideIndex;
+    }, slideInterval);
+  </script>
+
+</body>
+
+</html>
