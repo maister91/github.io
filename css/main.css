@@ -1,18 +1,16 @@
 .carousel {
   position: relative;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
 }
-
-.carousel-slides {
+.slides {
   display: flex;
-  flex-wrap: nowrap;
-  transition: transform 1s ease-in-out;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
-
-.carousel-slides img {
+.slide {
+  flex: 0 0 auto;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
