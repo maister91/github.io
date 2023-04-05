@@ -100,9 +100,12 @@ body {
 }
 
 .slide:nth-child(2) {
-  background: url('../resimler/image2.jpg') no-repeat center center/cover;
+  background: url('../resimler/image2.png') no-repeat center center/cover;
 }
 
 .slide:nth-child(3) {
-  background: url('../resimler/image3.jpg') no-repeat center center/cover;
+  background: url('../resimler/image3.png') no-repeat center center/cover;
 }
+
+.slide:nth-child(4) {
+  background: url('../resimler/image4.png') no-repeat center center/cover;
